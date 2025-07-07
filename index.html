@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pantalla LED de texto desplazante</title>
+  <style>
+    .led-container {
+      width: 400px;
+      height: 40px;
+      overflow: hidden;
+      background: #000;
+      border-radius: 8px;
+      border: 2px solid #444;
+      box-shadow: 0 0 8px #000;
+      position: relative;
+      color: #0f0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+    }
+    .led-text {
+      white-space: nowrap;
+      position: absolute;
+      left: 100%;
+      animation: scroll-left 10s linear infinite;
+    }
+    @keyframes scroll-left {
+      0%   { left: 100%; }
+      100% { left: -100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="led-container">
+    <span class="led-text">¡Esto es un texto desplazante tipo LED en HTML + JS!</span>
+  </div>
+</body>
+</html>
